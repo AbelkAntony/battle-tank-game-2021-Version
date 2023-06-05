@@ -402,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankPrefab: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+  speed: 0
 --- !u!4 &754490468
 Transform:
   m_ObjectHideFlags: 0
