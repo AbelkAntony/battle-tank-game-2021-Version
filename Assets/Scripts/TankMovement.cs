@@ -8,26 +8,27 @@ public class TankMovement : MonoBehaviour
     private GameObject tank;
     private string tankName;
     public float speed;
-    private float rotationSpeed;
+    private float rotationSpeed = 80;
     private int damagePoints;
     private int health;
     private float moveDirection;
-    private float turnDirection;
-    private float turnvalue;
+    private Vector3 rotationDirection;
+    private float rotation;
+    private float turnValue;
     private void Update()
     {
         if(Input.GetKey(KeyCode.UpArrow)|| Input.GetKey(KeyCode.DownArrow))
         {
+
             moveDirection = Input.GetAxis("Vertical");
-            this.tank.transform.position += Vector3.forward * speed * Time.deltaTime * moveDirection;
+            this.tank.transform.position += Vector3.forward* speed * Time.deltaTime * moveDirection;
             
         }
         if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
-            turnDirection = Input.GetAxis("Horizontal");
-            turnvalue = turnDirection * speed * Time.deltaTime;
-            this.tank.transform.rotation = Quaternion.Euler(0f,turnvalue,0f);
-
+            rotationDirection = new Vector3(0f, 1, 0f);
+            rotation = Input.GetAxis("Horizontal");
+            this.tank.transform.Rotate(rotationSpeed * rotationDirection * rotation * Time.deltaTime);
         }
     }
 
