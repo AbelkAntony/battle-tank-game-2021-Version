@@ -11,17 +11,23 @@ public class TankMovement : MonoBehaviour
     private float rotationSpeed;
     private int damagePoints;
     private int health;
-
+    private float moveDirection;
+    private float turnDirection;
+    private float turnvalue;
     private void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.UpArrow)|| Input.GetKey(KeyCode.DownArrow))
         {
-            this.tank.transform.position = Vector3.forward * speed * Time.deltaTime;
+            moveDirection = Input.GetAxis("Vertical");
+            this.tank.transform.position += Vector3.forward * speed * Time.deltaTime * moveDirection;
             
         }
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
         {
-            this.tank.transform.rotation = Quaternion.Euler(0f,rotationSpeed,0f);
+            turnDirection = Input.GetAxis("Horizontal");
+            turnvalue = turnDirection * speed * Time.deltaTime;
+            this.tank.transform.rotation = Quaternion.Euler(0f,turnvalue,0f);
+
         }
     }
 
