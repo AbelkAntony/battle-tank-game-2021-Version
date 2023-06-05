@@ -17,14 +17,14 @@ public class TankMovement : MonoBehaviour
     private float turnValue;
     private void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow)|| Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetAxis("Vertical")!=0)
         {
 
             moveDirection = Input.GetAxis("Vertical");
-            this.tank.transform.position += Vector3.forward* speed * Time.deltaTime * moveDirection;
+            this.tank.transform.position += this.tank.transform.rotation * Vector3.forward* speed * Time.deltaTime * moveDirection;
             
         }
-        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        if(Input.GetAxis("Horizontal")!=0)
         {
             rotationDirection = new Vector3(0f, 1, 0f);
             rotation = Input.GetAxis("Horizontal");
