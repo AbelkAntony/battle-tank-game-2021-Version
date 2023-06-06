@@ -22,9 +22,9 @@ public class TankMovement : MonoBehaviour
 
             moveDirection = Input.GetAxis("Vertical");
             this.tank.transform.position += this.tank.transform.rotation * Vector3.forward* speed * Time.deltaTime * moveDirection;
-            
+        
         }
-        if(Input.GetAxis("Horizontal")!=0)
+        if (Input.GetAxis("Horizontal")!=0)
         {
             rotationDirection = new Vector3(0f, 1, 0f);
             rotation = Input.GetAxis("Horizontal");
