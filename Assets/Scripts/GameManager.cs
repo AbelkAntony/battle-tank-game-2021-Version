@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] TankMovement tank;
+    [SerializeField] TankController tank;
     [SerializeField] GameObject uiGreenButton;
     [SerializeField] GameObject uiBlueButton;
     [SerializeField] GameObject uiRedButton;
-    private int tankColour;
 
 
     private void Awake()

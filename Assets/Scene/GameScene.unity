@@ -407,6 +407,7 @@ MonoBehaviour:
     type: 3}
   redTankPrefab: {fileID: 3919885571092682443, guid: 7a211843dbfd3f04aa39c55af3b9e063,
     type: 3}
+  bullet: {fileID: 0}
   speed: 0
   rotationSpeed: 0
   damagePoints: 0
@@ -1740,7 +1741,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391056259}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1391056261
 Behaviour:
   m_ObjectHideFlags: 0
