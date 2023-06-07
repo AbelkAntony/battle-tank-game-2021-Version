@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class TankMovement : MonoBehaviour
 {
-    [SerializeField] GameObject tankPrefab;
+    [SerializeField] GameObject greenTankPrefab;
+    [SerializeField] GameObject blueTankPrefab;
+    [SerializeField] GameObject redTankPrefab;
     private GameObject tank;
-    private string tankName;
     public float speed;
-    private float rotationSpeed = 80;
-    private int damagePoints;
-    private int health;
+    public float rotationSpeed;
+    public int damagePoints;
+    public int health;
     private float moveDirection;
     private Vector3 rotationDirection;
     private float rotation;
-    private float turnValue;
     private void Update()
     {
         if(Input.GetAxis("Vertical")!=0)
@@ -34,33 +34,36 @@ public class TankMovement : MonoBehaviour
 
     public void SpawnTank(int type)
     {
-        tank = Instantiate(tankPrefab);
+        
 
         if(type == 1)
         {
-            SetTankName("GREEN");
+            tank = Instantiate(greenTankPrefab);
             SetSpeed(10);
             SetHealth(100);
             SetDamage(20);
+            SetRotationSpeed(80);
         }
         else if (type == 2)
         {
-            SetTankName("BLUE");
+            tank = Instantiate(blueTankPrefab);
             SetSpeed(15);
             SetHealth(80);
             SetDamage(30);
+            SetRotationSpeed(100);
         }
         else if (type == 3)
         {
-            SetTankName("RED");
+            tank = Instantiate(redTankPrefab);
             SetSpeed(20);
             SetHealth(60);
             SetDamage(15);
+            SetRotationSpeed(120);
         }
     }
 
-    private void SetTankName(string name)       {   this.tankName = name;         }
     private void SetSpeed(int  speed)           {   this.speed = speed;           }
     private void SetHealth(int health)          {   this.health = health;         }
     private void SetDamage(int damage)          {   this.damagePoints = damage;   }
+    private void SetRotationSpeed(int speed)    {   this.rotationSpeed = speed;   }
 }
