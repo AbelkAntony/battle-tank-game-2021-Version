@@ -401,8 +401,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56a60b311cb6e640bcd520643561bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankPrefab: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+  greenTankPrefab: {fileID: 343792306812018649, guid: bf8250cc458bbc645ad5cef0de2cea0c,
+    type: 3}
+  blueTankPrefab: {fileID: 7873173243056114404, guid: d1a1692d5025ea044be26c6361b4649a,
+    type: 3}
+  redTankPrefab: {fileID: 3919885571092682443, guid: 7a211843dbfd3f04aa39c55af3b9e063,
+    type: 3}
   speed: 0
+  rotationSpeed: 0
+  damagePoints: 0
+  health: 0
 --- !u!4 &754490468
 Transform:
   m_ObjectHideFlags: 0
