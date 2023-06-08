@@ -407,7 +407,8 @@ MonoBehaviour:
     type: 3}
   redTankPrefab: {fileID: 3919885571092682443, guid: 7a211843dbfd3f04aa39c55af3b9e063,
     type: 3}
-  bullet: {fileID: 0}
+  bulletPrefab: {fileID: 3436911680619398172, guid: 8210093242322cd479a2af1fbfb02ace,
+    type: 3}
   speed: 0
   rotationSpeed: 0
   damagePoints: 0

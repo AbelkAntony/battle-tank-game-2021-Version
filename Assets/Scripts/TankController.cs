@@ -7,8 +7,6 @@ public class TankController : MonoBehaviour
     [SerializeField] GameObject greenTankPrefab;
     [SerializeField] GameObject blueTankPrefab;
     [SerializeField] GameObject redTankPrefab;
-    [SerializeField] BulletController bullet; 
-    private GameObject gunPoint;
     private GameObject tank;
     public float speed;
     public float rotationSpeed;
@@ -17,7 +15,6 @@ public class TankController : MonoBehaviour
     private float moveDirection;
     private Vector3 rotationDirection;
     private float rotation;
-    private Transform gun;
     private void Update()
     {
         TankMovement();
@@ -62,4 +59,5 @@ public class TankController : MonoBehaviour
         this.damagePoints = damagePoints;
         this.rotationSpeed = rotationSpeed;  
     }
+
 }

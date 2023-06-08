@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7633934658779645467
+--- !u!1 &1733290023448344768
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 75744969051553977}
-  - component: {fileID: 5049113344466718726}
+  - component: {fileID: 6635070994011906185}
   m_Layer: 0
-  m_Name: BulletSpwan
+  m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &75744969051553977
+--- !u!4 &6635070994011906185
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7633934658779645467}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1733290023448344768}
+  m_LocalRotation: {x: -0.022195013, y: 0.00000001723498, z: -0.000000012106954, w: 0.99975365}
+  m_LocalPosition: {x: -0.015999794, y: 1.52, z: 1.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7873173243056609036}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5049113344466718726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7633934658779645467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 987708f0c8d702c4b80b023c22650bde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3436911680619398172, guid: 8210093242322cd479a2af1fbfb02ace,
-    type: 3}
+  m_Father: {fileID: 7873173243056609028}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -2.544, y: 0, z: 0}
 --- !u!1001 &7873173243056213492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,6 +41,10 @@ PrefabInstance:
     - target: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
       propertyPath: m_Name
       value: Blue Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
       propertyPath: m_RootOrder
@@ -154,9 +143,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8903093, y: 1.9319211, z: 2.4192157}
   m_Center: {x: -0.029296398, y: 0.9736077, z: -0.0064327717}
---- !u!4 &7873173243056609036 stripped
+--- !u!114 &3294017723727802696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873173243056114404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987708f0c8d702c4b80b023c22650bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3436911680619398172, guid: 8210093242322cd479a2af1fbfb02ace,
+    type: 3}
+  gunPoint: {fileID: 1733290023448344768}
+--- !u!4 &7873173243056609028 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400120, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
+  m_CorrespondingSourceObject: {fileID: 400112, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd,
     type: 3}
   m_PrefabInstance: {fileID: 7873173243056213492}
   m_PrefabAsset: {fileID: 0}
